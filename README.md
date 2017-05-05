@@ -51,7 +51,8 @@ const fa = fairAnalytics({
 
 // track events
 fa.send({
-  event: 'pageView' // event is mandatory and can be anything
+  event: 'pageView', // event is mandatory and can be anything
+  pathname: window.location.pathname
 })
 .then(res => {
   if (res.ok) {
