@@ -1,14 +1,15 @@
 # Fair Analytics client JavaScript API
 
+
 > The quickest way to integrate [Fair Analytics](https://github.com/vesparny/fair-analytics) in your app
 
-[![Travis](https://img.shields.io/travis/vesparny/fair-analytics.svg)](https://travis-ci.org/vesparny/fair-analytics-client-api)
-[![Code Coverage](https://img.shields.io/codecov/c/github/vesparny/fair-analytics.svg?style=flat-square)](https://codecov.io/github/vesparny/fair-analytics-client-api)
-[![David](https://img.shields.io/david/vesparny/fair-analytics.svg)](https://david-dm.org/vesparny/fair-analytics-client-api)
-[![npm](https://img.shields.io/npm/v/fair-analytics.svg)](https://www.npmjs.com/package/fair-analytics-client-api)
-[![npm](https://img.shields.io/npm/dm/fair-analytics.svg)](https://npm-stat.com/charts.html?package=fair-analytics-client-api&from=2017-04-01)
+[![Travis](https://img.shields.io/travis/vesparny/fair-analytics-client-api.svg)](https://travis-ci.org/vesparny/fair-analytics-client-api)
+[![Code Coverage](https://img.shields.io/codecov/c/github/vesparny/fair-analytics-client-api.svg?style=flat-square)](https://codecov.io/github/vesparny/fair-analytics-client-api)
+[![David](https://img.shields.io/david/vesparny/fair-analytics-client-api.svg)](https://david-dm.org/vesparny/fair-analytics-client-api)
+[![npm](https://img.shields.io/npm/v/fair-analytics-client-api.svg)](https://www.npmjs.com/package/fair-analytics-client-api)
+[![npm](https://img.shields.io/npm/dm/fair-analytics-client-api.svg)](https://npm-stat.com/charts.html?package=fair-analytics-client-api&from=2017-04-01)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![MIT License](https://img.shields.io/npm/l/fair-analytics.svg?style=flat-square)](https://github.com/vesparny/fair-analytics-client-api/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/fair-analytics-client-api.svg?style=flat-square)](https://github.com/vesparny/fair-analytics-client-api/blob/master/LICENSE)
 [![gzip size](http://img.badgesize.io/https://unpkg.com/fair-analytics-client-api/dist/fair-analytics-client-api.umd.min.js?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/fair-analytics-client-api/dist/)
 
 
