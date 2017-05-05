@@ -1,0 +1,87 @@
+{
+  "name": "fair-analytics-client-api",
+  "amdName": "fairAnalytics",
+  "version": "0.0.0",
+  "description": "The Fair Analytics client API",
+  "jsnext:main": "index.js",
+  "module": "dist/fair-analytics-client-api.es.js",
+  "main": "dist/fair-analytics-client-api.cjs.js",
+  "umd:main": "dist/fair-analytics-client-api.umd.js",
+  "scripts": {
+    "bump": "standard-version",
+    "testonly": "jest --coverage",
+    "lint": "standard",
+    "format": "prettier --write --semi false '*.js' && standard --fix",
+    "test": "npm run lint && npm run testonly",
+    "build": "npm-run-all test clean rollup rollup:min size",
+    "clean": "rimraf dist",
+    "rollup": "rollup -c",
+    "rollup:min": "cross-env MINIFY=minify rollup -c",
+    "size": "echo \"Gzipped Size: $(cat dist/fair-analytics-client-api.umd.min.js | gzip-size)\"",
+    "release": "npm run build -s && npm run bump && git push --follow-tags origin master && npm publish"
+  },
+  "repository": "vesparny/fair-analytics-client-api",
+  "keywords": [
+    "fair",
+    "analytics",
+    "api",
+    "ga",
+    "google"
+  ],
+  "homepage": "https://github.com/vesparny/fair-analytics-client-api",
+  "authors": [
+    "Alessandro Arnodo <alessandro@arnodo.net>"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "index.js",
+    "index.spec.js"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.2",
+    "babel-preset-env": "^1.4.0",
+    "cross-env": "^4.0.0",
+    "gzip-size-cli": "^2.0.0",
+    "jest": "^19.0.2",
+    "npm-run-all": "^4.0.2",
+    "prettier": "^1.1.0",
+    "rimraf": "^2.5.2",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "standard": "^10.0.2",
+    "standard-version": "^4.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "cuid": "^1.3.8",
+    "unfetch": "^2.1.2"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "jest",
+      "expect",
+      "it",
+      "test",
+      "describe"
+    ]
+  },
+  "jest": {
+    "roots": [
+      "."
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --semi false",
+      "standard --fix",
+      "git add"
+    ]
+  }
+}
