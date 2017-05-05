@@ -72,7 +72,7 @@ $ yarn run test
 ## Change Log
 
 This project adheres to [Semantic Versioning](http://semver.org/).  
-Every release, along with the migration instructions, is documented in the [CHANGELOG.md](https://github.com/vesparny/borgjs/blob/master/CHANGELOG.md) file.
+Every release, along with the migration instructions, is documented in the [CHANGELOG.md](https://github.com/vesparny/fair-analytics-client-api/blob/master/CHANGELOG.md) file.
 
 ## License
 
