@@ -8,6 +8,7 @@
   "main": "dist/fair-analytics-client-api.cjs.js",
   "umd:main": "dist/fair-analytics-client-api.umd.js",
   "scripts": {
+    "precommit": "lint-staged",
     "bump": "standard-version",
     "testonly": "jest --coverage",
     "lint": "standard",
@@ -44,7 +45,9 @@
     "babel-preset-env": "^1.4.0",
     "cross-env": "^4.0.0",
     "gzip-size-cli": "^2.0.0",
+    "husky": "^0.13.3",
     "jest": "^19.0.2",
+    "lint-staged": "^3.4.1",
     "npm-run-all": "^4.0.2",
     "prettier": "^1.1.0",
     "rimraf": "^2.5.2",

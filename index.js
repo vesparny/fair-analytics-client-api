@@ -11,8 +11,12 @@ function checkStatus (res) {
   }
 }
 
-export default function fairAnalytics ({url} = {}) {
-  if (!url) throw new Error('You must provide the "url" of your Fair Analytics instance')
+export default function fairAnalytics ({ url } = {}) {
+  if (!url) {
+    throw new Error(
+      'You must provide the "url" of your Fair Analytics instance'
+    )
+  }
   let anonymousSessionId = 'NA'
   const localStorageKey = '__fa__'
 
@@ -28,7 +32,10 @@ export default function fairAnalytics ({url} = {}) {
         window.localStorage.setItem(localStorageKey, faConf)
         anonymousSessionId = faConf.anonymousSessionId
       } catch (e) {
-        console.warn('Error while setting anonymousSessionId "NA" will be used', e)
+        console.warn(
+          'Error while setting anonymousSessionId "NA" will be used',
+          e
+        )
       }
     }
   } catch (e) {
@@ -36,7 +43,7 @@ export default function fairAnalytics ({url} = {}) {
   }
 
   const send = (opts = {}) => {
-    if (!opts.event) return Promise.reject(new Error('You must provide the "event" parameter'))
+    if (!opts.event) { return Promise.reject(new Error('You must provide the "event" parameter')) }
     opts.anonymousSessionId = anonymousSessionId
     return fetch(url, {
       method: 'POST',
@@ -44,8 +51,7 @@ export default function fairAnalytics ({url} = {}) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(opts)
-    })
-    .then(checkStatus)
+    }).then(checkStatus)
   }
 
   return { send }

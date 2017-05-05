@@ -28,7 +28,9 @@ export default {
           }
         ]
       ]
-    }), minify ? uglify() : {}],
+    }),
+    minify ? uglify() : {}
+  ],
   targets: minify
     ? [
       {
