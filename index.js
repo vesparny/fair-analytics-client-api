@@ -1,4 +1,4 @@
-import fetch from 'unfetch'
+import fetch from 'isomorphic-unfetch'
 import cuid from 'cuid'
 
 function checkStatus (res) {
@@ -43,7 +43,9 @@ export default function fairAnalytics ({ url } = {}) {
   }
 
   const send = (opts = {}) => {
-    if (!opts.event) { return Promise.reject(new Error('You must provide the "event" parameter')) }
+    if (!opts.event) {
+      return Promise.reject(new Error('You must provide the "event" parameter'))
+    }
     opts.anonymousSessionId = anonymousSessionId
     return fetch(url, {
       method: 'POST',

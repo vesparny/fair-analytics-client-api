@@ -18,7 +18,7 @@
 This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
 
 ```sh
-$ yarn add fair-analytics-client-api
+$ npm i fair-analytics-client-api
 ```
 
 Then with a module bundler like [rollup](http://rollupjs.org/) or [webpack](https://webpack.js.org/), use as you would anything else:
@@ -67,7 +67,7 @@ fa.send({
 ## Tests
 
 ```sh
-$ yarn run test
+$ npm test
 ```
 
 ## Change Log
