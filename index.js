@@ -21,7 +21,7 @@ export default function fairAnalytics ({ url } = {}) {
   const localStorageKey = '__fa__'
 
   try {
-    const faConf = window.localStorage.getItem(localStorageKey)
+    const faConf = JSON.parse(window.localStorage.getItem(localStorageKey))
     if (faConf && faConf.anonymousSessionId) {
       anonymousSessionId = faConf.anonymousSessionId
     } else {
@@ -29,7 +29,7 @@ export default function fairAnalytics ({ url } = {}) {
         const faConf = {
           anonymousSessionId: cuid()
         }
-        window.localStorage.setItem(localStorageKey, faConf)
+        window.localStorage.setItem(localStorageKey, JSON.stringify(faConf))
         anonymousSessionId = faConf.anonymousSessionId
       } catch (e) {
         console.warn(
