@@ -33,13 +33,13 @@ export default function fairAnalytics ({ url } = {}) {
         anonymousSessionId = faConf.anonymousSessionId
       } catch (e) {
         console.warn(
-          'Error while setting anonymousSessionId "NA" will be used',
+          'Error while setting anonymousSessionId NA will be used',
           e
         )
       }
     }
   } catch (e) {
-    console.warn('Error while setting anonymousSessionId, "NA" will be used', e)
+    console.warn('Error while setting anonymousSessionId, NA will be used', e)
   }
 
   const send = (opts = {}) => {
